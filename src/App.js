@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Task from './components/Task'
+import Lists from './components/Lists';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="Main_box">
+        <Lists />
+        <div id="tasks">
+          <section id="contacts">
+            <Task></Task>
+            <Task></Task>
+            <Task></Task>
+          </section>
+          <form name="create">
+            <input type="text" name="title" required placeholder="title" />
+            <input type="text" name="description" placeholder="description" />
+            <input type="date" name="dueDate" placeholder="dueDate" />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

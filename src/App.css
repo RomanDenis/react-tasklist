@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+#Main_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 100px 250px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lists {
+  border: solid;
+  flex-basis: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list {
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-top: 20px;
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#tasks {
+  flex-basis: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+section>div {
+  padding-top: 10px;
+  border-style: solid;
+  border-width: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.deleteButton {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.doneSection .doneTask {
+  display: none;
+}
+
+#container>p {
+  line-height: 2;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
+.expiredDate {
+  color: red;
+}
+
+input[type="checkbox"]:checked~.Date.expiredDate {
+  color: black
+}
+
+.doneTask h2 {
+  color: #808080;
+  text-decoration: line-through;
+}
+
+#container {
+  display: flex;
+}
+
+#container>h2 {
+  flex-basis: 95%;
+}
+
+.TaskIsDone {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.description {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#upperBlock {
+  margin: 20px 100px 0px;
+  display: flex;
+  justify-content: space-between;
+  background-color: tan;
+  font-size: 18px;
+}
+
+#undoneBlock {
+  display: flex;
 }
