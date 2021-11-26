@@ -1,17 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-const Lists = () =>{
+const Lists = (props) => {
     return (
-        <div className = "lists">
-            <ul>
-                <li className = "list"> List1</li>
-                <li className = "list"> List2</li>
-                <li className = "list"> List3</li>
-                <li className = "list"> List4</li>
-              
+        <div className="lists">
+            <ul onClick={event=> props.onClick(event.target.id)}>
+                {props.lists.map(l =>
+                    <li key={l.id} id={l.id} className="list"> {l.title} ({l.countNotdoneTasks})</li>
+                )}
             </ul>
         </div>
-    )
-}
-
-export default Lists;
+    )  
+};
+export default Lists

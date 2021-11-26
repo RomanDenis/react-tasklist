@@ -9,6 +9,14 @@
   border: solid;
   flex-basis: 30%;
 }
+.tasks {
+  border: solid;
+  flex-basis: 70%;
+  
+}
+.tasks li{
+  list-style-type: none;
+}
 
 .list {
   font-size: 24px;
