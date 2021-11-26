@@ -1,13 +1,12 @@
+import Task from './Task';
 import React from 'react';
-import Task from './Task'
 
-
-const Tasks = (props) => {
-    let tasks = props.tasks.filter(t =>parseInt(props.activeList) === t.taskListId);
+const Tasks = (props) => 
+{
     return (
         <div className="tasks">
             <ul >
-               {tasks.map(t =>
+               {props.tasks.map(t =>
                     <li className={(t.done) ? "doneTask": ""} key={t.id}> 
                     <Task task={t} onChange={props.onChange} onClick={props.onClick}></Task> </li>
                 )}

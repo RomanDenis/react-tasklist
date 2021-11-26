@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const Task = (props) => {
+const TodayTask = (props) => {
     let task = props.task;
     const onDoneChange = (event) => {
         task.done = event.target.checked;
@@ -9,7 +10,6 @@ const Task = (props) => {
     const onDelete = (event) => {
         props.onClick(task.id);
     }
-
     const CheckDate = (date, done) => {
         if (done) { return "Date" }
         else {
@@ -21,10 +21,11 @@ const Task = (props) => {
             }
         }
     }
+   
     return (
-        <div id={task.id} >
-             <h2> {(props.today) ? `${task.list.title}` : ""} </h2>
-            <div id="container">
+        <div id={task.id}>
+            <Link to={`../todo-list/${task.list.id}`}> {task.list.title} </Link>
+             <div id="container">
                 <input className="TaskIsDone" type="checkbox"
                     name="done" defaultChecked={task.done} onChange={onDoneChange} />
                 <h2>{task.title}</h2>
@@ -35,4 +36,4 @@ const Task = (props) => {
         </div>
     )
 }
-export default Task;
+export default TodayTask;

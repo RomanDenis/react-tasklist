@@ -11,7 +11,7 @@
 }
 .tasks {
   border: solid;
-  flex-basis: 70%;
+  flex-basis: 100%;
   
 }
 .tasks li{
@@ -28,7 +28,6 @@
 
 #tasks {
   flex-basis: 70%;
-  display: flex;
   flex-direction: column;
 }
 
@@ -96,4 +95,20 @@ input[type="checkbox"]:checked~.Date.expiredDate {
 
 #undoneBlock {
   display: flex;
+}
+#sidebar{
+  display: flex;
+  flex-direction: column;
+}
+.TaskPage{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form{
+  flex-basis: 10%;
+}
+#TaskTodayButton{
+  width: 100%;
+  height: 30px;
 }
